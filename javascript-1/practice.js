@@ -196,6 +196,4 @@ let enemies = people.filter(obj => obj.friend === false)
 // Using the people array above, let's get a total of the awesomeLevel from all the people. Call the new array 'totallyAwesome'. Use .reduce()
 
 // Code Here
-let totallyAwesome = people.reduce(function(acc, cv){ 
-	return acc + cv.awesomeLevel
-})
+let totallyAwesome =  people.reduce((sum, person)=> {return sum+person.awesomeLevel}, 0)
